@@ -6,7 +6,6 @@
 }
 *::before,
 *::after { box-sizing: border-box; }
-.container { padding: 0 25px; margin: auto; }
 
 /* Variables */
 :root {
@@ -67,7 +66,7 @@ body {
     position: absolute;
     height: 50%;
     width: 70%;
-}
+    }
     .chat-app::before {
         top: 0;
         left: -75px;
@@ -85,6 +84,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 25px 0 25px;
     gap: 100px;
     width: 70%;
     z-index: 1;
@@ -92,10 +92,10 @@ body {
 @media (max-width: 1025px) {
     .chat-app .container {
         flex-direction: column;
+        gap: 50px;
     }
 }
 .chat-app .mobile {
-    margin-top: 40px;
     background-color: #fff;
     padding: 10px;
     border-radius: 10px;
@@ -110,7 +110,7 @@ body {
 .chat-app .mobile .screen .header {
     background-image: linear-gradient(to right,hsl(264, 100%, 61%) , hsl(293, 100%, 63%));
     border-radius: 35px 35px 5px 5px;
-    padding: 40px 15px 15px 15px;
+    padding: 30px 15px 15px 15px;
     position: relative;
     display: flex;
     align-items: center;
@@ -122,13 +122,14 @@ body {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 60%;
-    height: 25px;
-    border-radius: 0 0 150px 150px;
+    width: 65%;
+    height: 20px;
+    border-radius: 0 0 15px 15px;
     background-color: #fff;
 }
 .chat-app .mobile .screen .header i {
     color: #fff;
+    font-size: 12px
 }
 .chat-app .mobile .screen .header .info {
     flex: 1;
@@ -145,14 +146,14 @@ body {
     margin-right: 10px;
 }
 .chat-app .mobile .screen .header .info h3 {
-    color: #fff;
-    font-size: 18px;
+    color: #ffffff;
+    font-size: 14px;
     font-weight: 500;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
 }
 .chat-app .mobile .screen .header .info p {
     color: var(--sub-heading);
-    font-size: 14px;
+    font-size: 10px;
 }
 .chat-app .mobile .screen .chat {
     background-color: var(--app-background);
@@ -160,16 +161,15 @@ body {
     border-radius: 0 0 35px 35px;
 }
 .chat-app .mobile .screen .chat .imgs img{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 10px;
-
 }
 .chat-app .mobile .screen .chat .on-left,
 .chat-app .mobile .screen .chat .on-right {
     display: flex;
-    margin-bottom: 5px;
-    font-size: 12px;
+    margin-bottom: 8px;
+    font-size: 10px;
 }
 .chat-app .mobile .screen .chat .on-left {
     justify-content: flex-start;
@@ -180,7 +180,7 @@ body {
 .chat-app .mobile .screen .chat .on-left > p,
 .chat-app .mobile .screen .chat .on-right > p {
     width: fit-content;
-    max-width: 200px;
+    max-width: 160px;
     padding: 10px;
 }
 .chat-app .mobile .screen .chat .on-left > p {
@@ -207,15 +207,16 @@ body {
     color: #fff;
 }
 .chat-app .mobile .screen .chat .prices input[type="radio"] {
-    outline: 1px solid var(--radio-button-outline);
-    border-radius: 50%;
+    outline: 5px solid red;
+    /* border-radius: 50%; */
     width: 20px;
     height: 20px;
-    accent-color:red;
+    outline: none;
+    border: 5px solid red;
 }
 .chat-app .mobile .screen .chat .prices p {
     flex: 1;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: normal;
     margin-left: 10px;
 }
@@ -229,7 +230,7 @@ body {
 }
 .chat-app .mobile .screen .chat form input[type="text"] {
     background-color: #fff;
-    padding: 15px;
+    padding: 10px;
     outline: none;
     border: none;
     border-radius: 25px;
@@ -241,19 +242,20 @@ body {
 .chat-app .mobile .screen .chat form .submit {
     position: absolute;
     top: 50%;
-    right: 0;
-    transform: translate(-50%,-50%);
+    right: 5px;
+    transform: translateY(-50%);
     background-color: var(--submit-button-background);
     border-radius: 50%;
     width: 20px;
     height: 20px;
-    padding: 15px;
+    padding: 13px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .chat-app .mobile .screen .chat form .submit i {
     color: #fff;
+    font-size: 13px;
 }
 .chat-app .about {
     width: 550px;
